@@ -1,0 +1,57 @@
+Question and Exercises
+
+1. Wrote a program which does calculates the page rank
+function(a) {
+var t=[]		//page pointing to--
+var pr={}		//page rank
+var d=mininmum_value	//minimum value to any page
+var c={}	//outgoing links
+
+pr[a]=d+(1-d)*(()=>{
+			var temp=0;
+			for(let j=0;j<pr.length;j++) {
+				temp+=pr[t[j]]/c[t[j]];
+			}	
+			return temp;
+		});
+}
+
+4. PageRank works by counting the number and quality of links to a page to determine a rough estimate of how important the website is. The underlying assumption is that more important websites are likely to receive more links from other websites.
+
+5. Anchor text is the clickable text in a hyperlink. SEO best practices dictate that anchor text be relevant to the page you're linking to, rather than generic text. The blue, underlined anchor text is the most common as it is the web standard, although it is possible to change the color and underlining through html code. The keywords in anchor text are one of the many signals search engines use to determine the topic of a web page. 
+check https://www.w3.org/QA/Tips/noClickHere where it shows the bad way to use anchor tag.
+To download W3C's editor/browser Amaya, <a hreg="">click here.</a>. This misleads the user and they don't press it cause of confusion.
+
+-----------------------------
+
+Word-: "bank"
+The noun bank has 10 senses
+The verb bank has 8 senses
+
+Gloss-: a ?nancial institution that accepts deposits and channels the money into lending activities
+Sentence-: he cashed a check at the bank
+vector: [check, cashed, check cashed]
+
+Gloss-: the slope beside a body of water
+Sentence-: he sat on the bank of the river and watched the currents
+vector: [river, watched, river watched]
+
+Sense 1
+{08305900} <noun.group> depository financial institution#1, bank#1, banking concern#1, banking company#1 -- (a financial institution that accepts deposits and channels the money into lending activities; "he cashed a check at the bank"; "that bank holds the mortgage on my home")
+       => {07945061} <noun.group> financial institution#1, financial organization#1, financial organisation#1 -- (an institution (public or private) that collects funds (from the public or other institutions) and invests them in financial assets)
+
+Sense 2
+{09081442} <noun.object> bank1#2 -- (sloping land (especially the slope beside a body of water); "they pulled the canoe up on the bank"; "he sat on the bank of the river and watched the currents")
+       => {09301963} <noun.object> slope#1, incline#1, side1#11 -- (an elevated geological formation; "he climbed the steep slope"; "the house was built on the side of a mountain")
+
+
+
+We can use the cosine of the angle to geta normalized measure of similarity of two senses S1, S2, by 
+cos((v1.v2) - (v1.v2)/(mod(v1)mod(v2))) where v1 and v2 are the vectors. 
+Since the coordinates of concept vectors and context vectors are always non-negative, the angle between any two vectors is in 0 and pi/2 and the cosine of the angle is in 0 and 1
+
+Cosin Similarity of (he sat on the bank of the river and watched the currents,he cashed a check at the bank)=0.35
+This method and other methods gave the same similarity between two senses approximately. Also verified at the below string similarity website--
+http://cs.uef.fi/~zhao/Link/Similarity_strings.html
+https://en.wikipedia.org/wiki/Cosine_similarity
+http://www.academia.edu/16383663/Measuring_semantic_similarity_using_wordnet-based_context_vectors

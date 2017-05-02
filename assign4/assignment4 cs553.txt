@@ -1,0 +1,18 @@
+After running segment profile node, results included 4 panels.
+
+1. Profile panel-
+
+The Profile window displays a lattice, or grid, of plots that compare the distribution for the identified and report variables for both the segment and the population. The graphs shown in this window illustrate variables that have been identified as factors that distinguish the segment from the population that it represents. Each row represents a single segment. The far-left margin identifies the segment, its count, and the percentage of the total population.
+The columns are organized from left to right according to their ability to discriminate that segment from the population. Report variables, if specified, appear on the right in alphabetical order after the selected inputs. The lattice graph has following properties-
+(a) Class variable is displayed as two nested pie charts that consist of two concentric rings. The inner ring represents the distribution of the total population. The outer ring represents the distribution for the given segment. (b) Interval variable is displayed as a histogram. The blue shaded region represents the within-segment distribution. The red outline represents the population distribution. The height of the histogram bars can be scaled by count or by percentage of the segment population.
+
+2. size panel-
+
+The next panel displays the size of the cluster which for each segment value, displays the frequency count.
+
+3. Variable worth panel-
+This panel displays a chart that gives me the worth of each variable in predicting my target. In segment value=6, the worth of variable v_adminby is the highest worth value, and as going towards right, the value decreases.
+
+4. Output panel-
+the last panel shows the stats or the summary of the results. It shows the rol, the measurement level, and the frequency count value. As the _prob variables and _svd variables were set from default to no, the segment variable is only textCluster_cluster_ which has a total of 6 segments and count of 8352
+

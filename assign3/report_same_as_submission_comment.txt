@@ -1,0 +1,45 @@
+1. Text parsing vs Text_Filter_Mutual_Information Results
+There is one extra panel after text filtering. The extra panel shows the number of documents by weight graph. This panel shows the weight of each term in correspond to the documents frequency. The weighting for term frequencies in the term/document matrix. Mutual information is one of the techniques to determine the term importance. In Attribute by frequency panel, it shows the graph of attrivute and its frequency. As you can see from the image, the alpha frequency is less after filtering process and the difference is close also a big number.  Same with the role by frequency graph, the percentage frequency dropped can easily be seen. In the term panel, there is an extra weight colum that shows the weight value of that term.
+
+2. Text parsing vs text_filter_inverse_document_frequency results
+As you can see from the picture, there are 7 panels one panel extra than the parsing result which shows the number of documents by weight graph. In the terms panel, you can clearly notice the value of weight much higher than it was in the the picture that shows the text filtering by mutual information. This is because of the different formula used by these techniques. The IDF uses wt = log(n/dft) + 1 where as Mutual Information uses wt = maxck[ log (P(t, ck)/(P(t)*P(ck)) ]. The panel also shows the dropped terms and can also be seen from the  picture as some terms are been dropped. The percentage is close to the previous technique, but the weight calculated is totally different. 
+
+-> IDF frequency weighting set to binary and log for above:
+Setting the frequency weighting to binary didn't really show any noticeable effect. When I set the frequency weighting to log, and output the results, still there weren't any noticeable changes. Both the result panels can be seen as pictures are present inside the folder.
+
+3. Text_parsing vs Text_Filter_Entropy results
+When the term weight technique set to entropy, the weight values of the term as can be seen from the picture in the terms panel is slightly higher than the ones in mutual information but really low than the one in inverse document frequency techniques. The weight of the terms is calculated using the formula wt = 1 + sum[j = 1…n | (ftj/gt)*log2(ftj/gt)/log2n]. Entropy is 0 if the term appears only once in the entire collection and is 1 if the term only appears once in one document. Comparing this and the text parsing results, you can notice so many terms been dropped.
+
+->> Text cluster --Maximum 40 clusters and 12 terms(default)
+Panels:-
+
+a) Cluster frequencies-
+this panel displays a pie chart of all the clusters and owns the same percent of the pie chart accoring to their frequencies percentage.
+
+b) Distance Between Clusters-
+This graph displays the distances between different clusters. The distance between two clusters is similar to the concept of distance between two coordinates. In case of Text mining, the distance is the measure of similarity between two clusters.
+
+c) Clusters-
+This panel shows all the clusters that are there. There frequencies, percentages and multiple coordinates.
+
+d) Output panel-
+This panel shows the output log, frequencies of the clusters, their percentages and the cumulative progress.
+
+e) Cluster frequency by RMS-
+This panel shows the cluster frequency by root mean squared standard deviation. The standard deviation within teach cluster that is the square root of the summarized squared distance between each data point and the seed for each cluster group, which we want to be as small as possible.
+
+->>Text cluster Exact 5 clusters
+Difference between main text cluster and text cluster with number of clusters set to exact 5 (See images)-
+As you can see, there are several differences between them. First of all, since we set the number of clusters exactly to 5, each cluster now contains more terms. The Cluster Frequencies pie chart is now more favored towards the 5th cluster as it contains the most frequency of 2588.
+
+->>Text cluster with algorithm set to hierarchical
+The results shows 2 extra panels- hierarchy data and cluster hierarchy. The cluster hierarchy shows a graph with different nodes as clusters connected to each other. Whereas the Hierarchy data displays the hierarchy level of each cluster with their frequency and terms that descibe that cluster. Different clusters can be at the same hierarchy level. 
+
+->>Text cluster with exactly 40 clusters with 100 terms-
+The result shows us how 100 terms are put into the disjoint sets made up to 40 clusters. The software generally recommends this to be 9 clusters, but forcing it to differentiate all the terms into 40 clusters puts the data a little inreadable.
+
+->>Text Cluster with exactly 2 number of clusters and 10 terms-
+As you can see from the image, 2 clusters are formed dividing the 10 descriptive terms among them. The cumulative frequency of thos two cluster sums upto 7604. The top terms that were filtered earlier are put into different sets accordingly.
+
+->>Text Cluster with exactly 2 clusters and 10 terms with Hierarchical Algorithm-
+This solution displays a cluster Hierarchy with 3 hierarchy levels. With this algorithm, the terms are divided a little different as can be seen from the image when compared to the last result with the different algorithm.
